@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Portuguese for Lenja</title>
+<meta name="description" content="Practice Portuguese present and past tenses, Brazilian and European, with explanations and pronunciation.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%87%A7%F0%9F%87%B7%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,400;7..72,600&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f6f7fb;--surface:#fff;--ink:#14213d;--muted:#5b6579;--line:#d9deea;--accent:#1f3a8a;--accent-ink:#fff;--ok:#1f7a54;--ok-bg:#e3f4ec;--bad:#b3261e;--bad-bg:#fbe9e7;--warn:#8a5a00;--warn-bg:#fff3d6;color-scheme:light}
+@media (prefers-color-scheme:dark){:root{--bg:#0f1426;--surface:#171e36;--ink:#eef1fa;--muted:#a3adc7;--line:#2c3558;--accent:#8fa8ff;--accent-ink:#0f1426;--ok:#6fd1a2;--ok-bg:#12332a;--bad:#ff8f86;--bad-bg:#3a1b1a;--warn:#f0c36a;--warn-bg:#3a2d0f;color-scheme:dark}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Work Sans",system-ui,sans-serif;line-height:1.5}
+main{max-width:48rem;margin:0 auto;padding:1.5rem 1rem 4rem}
+h1{font-family:"Literata",Georgia,serif;font-size:2rem;margin:.2rem 0 .25rem;letter-spacing:-.01em}
+.sub{color:var(--muted);margin:0 0 1rem}
+.row{display:flex;gap:.5rem 1rem;flex-wrap:wrap;align-items:center;margin-bottom:1rem}
+.seg{display:inline-flex;border:1.5px solid var(--accent);border-radius:8px;overflow:hidden}
+.seg button{font:inherit;font-weight:600;padding:.45rem 1rem;border:0;background:transparent;color:var(--accent);cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--accent);color:var(--accent-ink)}
+.tabs{display:flex;gap:.4rem;flex-wrap:wrap;margin-bottom:1rem}
+.tab{font:inherit;font-weight:500;padding:.5rem .9rem;border:1.5px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;cursor:pointer}
+.tab[aria-selected="true"]{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+details{background:var(--surface);border:1px solid var(--line);border-left:5px solid var(--accent);border-radius:8px;padding:.7rem 1rem;margin-bottom:1.25rem}
+summary{cursor:pointer;font-weight:600}
+details p{margin:.6rem 0}
+.tblwrap{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:.92rem;margin:.5rem 0}
+th,td{padding:.3rem .5rem;text-align:left;border-bottom:1px solid var(--line);white-space:nowrap}
+th{font-weight:600;color:var(--muted)}
+td:first-child{font-weight:600}
+.dim{opacity:.45}
+.note{color:var(--muted);font-size:.88rem}
+ol{list-style:none;margin:0;padding:0;display:grid;gap:.6rem}
+li.q{background:var(--surface);border:1.5px solid var(--line);border-radius:10px;padding:.8rem 1rem;font-family:"Literata",Georgia,serif;font-size:1.1rem;line-height:2.1}
+li.q.ok{border-color:var(--ok);background:var(--ok-bg)}
+li.q.bad{border-color:var(--bad);background:var(--bad-bg)}
+li.q.near{border-color:var(--warn);background:var(--warn-bg)}
+input{font:inherit;font-family:"Work Sans",sans-serif;width:9.5rem;padding:.2rem .5rem;border:0;border-bottom:2px solid var(--accent);background:transparent;color:var(--ink);text-align:center;border-radius:0}
+input:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.verb{font-family:"Work Sans",sans-serif;font-size:.85rem;color:var(--muted)}
+.fb{display:block;font-family:"Work Sans",sans-serif;font-size:.9rem;line-height:1.45;font-weight:600}
+.ok .fb{color:var(--ok)}.bad .fb{color:var(--bad)}.near .fb{color:var(--warn)}
+.why{display:block;font-family:"Work Sans",sans-serif;font-size:.88rem;line-height:1.45;font-weight:400;color:var(--ink);margin-top:.15rem}
+.bar{display:flex;gap:.6rem;flex-wrap:wrap;align-items:center;margin-top:1.25rem}
+.btn{font:inherit;font-weight:600;padding:.65rem 1.2rem;border-radius:8px;border:1.5px solid var(--accent);background:var(--accent);color:var(--accent-ink);cursor:pointer}
+.btn.alt{background:transparent;color:var(--accent)}
+.score{margin-left:auto;font-weight:600}
+.best{color:var(--muted);font-size:.85rem;margin-top:.5rem}
+.spk{display:inline-flex;vertical-align:middle;margin-left:.4rem;padding:.3rem;border:1.5px solid var(--line);border-radius:50%;background:var(--surface);color:var(--accent);cursor:pointer}
+.spk:hover{border-color:var(--accent)}
+.form{font:inherit;color:inherit;background:none;border:0;border-bottom:1px dotted var(--accent);padding:0;cursor:pointer}
+</style>
+</head>
+<body>
+<main>
+  <h1>Portuguese for Lenja</h1>
+  <p class="sub">Fill in the verb, press Check answers, then read why. Switch between Brazilian and European Portuguese at any time.</p>
+  <div class="row">
+    <div class="seg" role="group" aria-label="Variant">
+      <button id="vbr" aria-pressed="true">Brasil</button>
+      <button id="vpt" aria-pressed="false">Portugal</button>
+    </div>
+  </div>
+  <div class="tabs" role="tablist" id="tabs"></div>
+  <details id="learn" open></details>
+  <ol id="list"></ol>
+  <div class="bar">
+    <button class="btn" id="check">Check answers</button>
+    <button class="btn alt" id="show">Show answers</button>
+    <button class="btn alt" id="again">New set</button>
+    <span class="score" id="score" aria-live="polite"></span>
+  </div>
+  <div class="best" id="best"></div>
+  <div class="best" id="voicenote" aria-live="polite"></div>
+</main>
+<script>
+/* Item: b = Brazil sentence, p = Portugal sentence (optional), v = verb,
+   a = Brazil answer, pa = Portugal answer (optional), w = why, d = difference note (optional).
+   Alternative accepted answers can be separated with "/". */
+const FORMS={
+ presente:[["falar","falo","falas","fala","falamos","falam"],["comer","como","comes","come","comemos","comem"],["partir","parto","partes","parte","partimos","partem"]],
+ perfeito:[["falar","falei","falaste","falou",["falamos","falámos"],"falaram"],["comer","comi","comeste","comeu","comemos","comeram"],["partir","parti","partiste","partiu","partimos","partiram"]],
+ imperfeito:[["falar","falava","falavas","falava","falávamos","falavam"],["comer","comia","comias","comia","comíamos","comiam"],["partir","partia","partias","partia","partíamos","partiam"]]
+};
+const SETS={
+presente:{name:"Presente",
+ rule:"Use the present for habits, facts and what is happening now. Take the infinitive, drop -ar / -er / -ir, and add the ending for the person. Você, ele and ela always share the same form, and so do vocês, eles and elas.",
+ items:[
+ {b:"Eu ___ português todos os dias.",v:"falar",a:"falo",w:"Eu always ends in -o in the present: falo, como, parto."},
+ {b:"Você ___ peixe no almoço.",p:"Tu ___ peixe ao almoço.",v:"comer",a:"come",pa:"comes",w:"Você takes the same form as ele and ela (-e for -er verbs). Tu takes -es.",d:"In Brazil você is the everyday word for “you”. In Portugal tu is for friends and family and você sounds more formal."},
+ {b:"Ela ___ a janela.",v:"abrir",a:"abre",w:"For -ir verbs ele and ela end in -e: abre."},
+ {b:"Nós ___ em São Paulo.",p:"Nós ___ em Lisboa.",v:"morar",a:"moramos",w:"Nós adds -mos to the vowel: mor-a-mos, com-e-mos, part-i-mos."},
+ {b:"Eles ___ café de manhã.",v:"beber",a:"bebem",w:"Eles, elas and vocês end in -em for -er and -ir verbs: bebem, partem."},
+ {b:"Eu ___ engenheiro.",v:"ser",a:"sou",w:"Ser is irregular: sou, és (tu), é, somos, são. It is used for identity, profession and permanent traits."},
+ {b:"Você ___ em casa?",p:"Tu ___ em casa?",v:"estar",a:"está",pa:"estás",w:"Estar is for location and temporary states. Você uses the ele/ela form está, tu uses estás."},
+ {b:"A gente ___ um cachorro.",p:"Nós ___ um cão.",v:"ter",a:"tem",pa:"temos",w:"In Brazil a gente (“we”, informal) takes the ele/ela form: tem. Nós takes temos.",d:"Cachorro is the Brazilian word, cão is the usual one in Portugal. A gente is very common in Brazil."},
+ {b:"Eles ___ à praia.",v:"ir",a:"vão",w:"Ir is irregular: vou, vais, vai, vamos, vão."},
+ {b:"Eu ___ o jantar.",v:"fazer",a:"faço",w:"In fazer the eu form changes z to ç (faço). The other forms are regular: fazes, faz, fazemos, fazem."},
+ {b:"Vocês ___ um café?",v:"querer",a:"querem",w:"Vocês uses the eles form, so querem."},
+ {b:"Eu ___ ajudar.",v:"poder",a:"posso",w:"Poder has an irregular eu form: posso. Then podes, pode, podemos, podem."},
+ {b:"Agora eu estou ___ português.",p:"Agora eu estou a ___ português.",v:"estudar",a:"estudando",pa:"estudar",w:"For an action in progress, Brazil uses estar + gerund (-ndo). Portugal uses estar a + infinitive.",d:"Brazil: estou estudando. Portugal: estou a estudar."}
+ ]},
+perfeito:{name:"Pretérito perfeito",
+ rule:"Use the perfeito for finished actions in the past: ontem eu falei, nós fomos. Signal words are ontem, semana passada, em 2019, de repente.",
+ items:[
+ {b:"Ontem eu ___ com o João.",v:"falar",a:"falei",w:"For -ar verbs eu ends in -ei: falei."},
+ {b:"Você ___ tudo!",p:"Tu ___ tudo!",v:"comer",a:"comeu",pa:"comeste",w:"For -er verbs: você, ele and ela end in -eu, tu ends in -este.",d:"Portuguese learners often drop the tu forms in Brazil, because você with the ele/ela form is what you will hear."},
+ {b:"Ela ___ a porta.",v:"abrir",a:"abriu",w:"For -ir verbs ele and ela end in -iu: abriu, partiu."},
+ {b:"Nós ___ em São Paulo em 2019.",p:"Nós ___ em Lisboa em 2019.",v:"morar",a:"moramos",pa:"morámos",w:"For -ar verbs nós looks the same in the present and the perfeito. Context tells you which (em 2019 means past). Portugal adds an accent to tell them apart.",d:"Brazil writes moramos for both tenses. Portugal writes morámos for the past."},
+ {b:"Eles ___ vinho.",v:"beber",a:"beberam",w:"Eles, elas and vocês always end in -ram in the perfeito: falaram, beberam, partiram."},
+ {b:"Eu ___ professor por dois anos.",p:"Eu ___ professor durante dois anos.",v:"ser",a:"fui",w:"Ser and ir share one perfeito: fui, foste, foi, fomos, foram. Context tells you which verb it is."},
+ {b:"Ontem nós ___ ao cinema.",v:"ir",a:"fomos",w:"Same forms as ser: fui, foste, foi, fomos, foram."},
+ {b:"Ela ___ muito trabalho.",v:"ter",a:"teve",w:"Ter has an irregular stem: tive, tiveste, teve, tivemos, tiveram."},
+ {b:"Eu ___ um bolo.",v:"fazer",a:"fiz",w:"Fazer: fiz, fizeste, fez, fizemos, fizeram."},
+ {b:"Você ___ lá ontem?",p:"Tu ___ lá ontem?",v:"estar",a:"esteve",pa:"estiveste",w:"Estar: estive, estiveste, esteve, estivemos, estiveram. Você takes the ele/ela form esteve."},
+ {b:"Eles ___ a verdade.",v:"dizer",a:"disseram",w:"Dizer: disse, disseste, disse, dissemos, disseram."},
+ {b:"Eu ___ o jogo.",v:"ver",a:"vi",w:"Ver: vi, viste, viu, vimos, viram."}
+ ]},
+imperfeito:{name:"Pretérito imperfeito",
+ rule:"Use the imperfeito for habits, descriptions and ongoing actions in the past: “I used to play”, “she was tired”, “we lived near the sea”. Only four verbs are irregular: ser, ter, vir and pôr.",
+ items:[
+ {b:"Quando eu era criança, eu ___ na rua.",v:"brincar",a:"brincava",w:"For -ar verbs the endings are -ava, -avas, -ava, -ávamos, -avam. This is a repeated past habit."},
+ {b:"Você ___ muito doce.",p:"Tu ___ muito doce.",v:"comer",a:"comia",pa:"comias",w:"For -er and -ir verbs the endings are -ia, -ias, -ia, -íamos, -iam. Você takes comia, tu takes comias."},
+ {b:"Ela ___ a loja às nove.",v:"abrir",a:"abria",w:"-ir verbs use the same endings as -er: abria."},
+ {b:"Nós ___ perto do mar.",v:"morar",a:"morávamos",w:"For -ar verbs nós is -ávamos, with an accent on the á."},
+ {b:"Eles ___ chá todo dia.",p:"Eles ___ chá todos os dias.",v:"beber",a:"bebiam",w:"Eles, elas and vocês: -iam for -er and -ir verbs."},
+ {b:"Eu ___ tímido.",v:"ser",a:"era",w:"Ser: era, eras, era, éramos, eram. Descriptions in the past use the imperfeito."},
+ {b:"Você ___ um gato.",p:"Tu ___ um gato.",v:"ter",a:"tinha",pa:"tinhas",w:"Ter: tinha, tinhas, tinha, tínhamos, tinham."},
+ {b:"Nós ___ à praia no verão.",v:"ir",a:"íamos",w:"Ir: ia, ias, ia, íamos, iam. “In the summer” signals a habit."},
+ {b:"Eu ___ açúcar no café.",v:"pôr",a:"punha",w:"Pôr: punha, punhas, punha, púnhamos, punham."},
+ {b:"Eles ___ aqui sempre.",p:"Eles ___ cá sempre.",v:"vir",a:"vinham",w:"Vir: vinha, vinhas, vinha, vínhamos, vinham. “Sempre” signals a habit.",d:"Aqui is common in Brazil, cá is more typical in Portugal."},
+ {b:"Ela ___ cansada.",v:"estar",a:"estava",w:"For -ar verbs: estava. Describes a state in the past."},
+ {b:"Nós ___ o jantar juntos.",v:"fazer",a:"fazíamos",w:"Fazer is regular in the imperfeito: fazia, fazias, fazia, fazíamos, faziam."}
+ ]},
+mix:{name:"Perfeito vs imperfeito",
+ rule:"Use the imperfeito for background, habits and actions in progress. Use the perfeito for a finished event that moves the story forward. Clues: enquanto, antigamente, sempre → imperfeito. Ontem, de repente, no sábado → perfeito.",
+ items:[
+ {b:"Enquanto eu dormia, o telefone ___.",v:"tocar",a:"tocou",w:"Dormia is the background action in progress. The phone ringing is a single event that interrupts it, so perfeito."},
+ {b:"Quando eu era criança, eu ___ em Curitiba.",p:"Quando eu era criança, eu ___ em Braga.",v:"morar",a:"morava",w:"A long background situation in the past, so imperfeito."},
+ {b:"Ontem ___ o dia todo.",v:"chover",a:"choveu",w:"Ontem marks a finished period, even if it lasted all day, so perfeito."},
+ {b:"Ela estava ___ quando eu entrei.",p:"Ela estava a ___ quando eu entrei.",v:"ler",a:"lendo",pa:"ler",w:"Estava + gerund (Brazil) or estava a + infinitive (Portugal) shows an action in progress that was interrupted by entrei.",d:"Brazil: estava lendo. Portugal: estava a ler."},
+ {b:"No sábado passado nós ___ fora.",v:"jantar",a:"jantamos",pa:"jantámos",w:"A specific finished event, so perfeito. Portugal writes jantámos with an accent.",d:"Brazil: jantamos. Portugal: jantámos."},
+ {b:"Antigamente eles ___ futebol todo dia.",p:"Antigamente eles ___ futebol todos os dias.",v:"jogar",a:"jogavam",w:"Antigamente signals a past habit, so imperfeito."},
+ {b:"De repente, ele ___ a porta.",v:"abrir",a:"abriu",w:"De repente introduces a sudden event, so perfeito."},
+ {b:"Eu ___ um livro quando você chegou.",p:"Eu ___ um livro quando tu chegaste.",v:"ler",a:"lia",w:"Reading was in progress (imperfeito) when the completed event of arriving happened (chegou/chegaste)."}
+ ]}
+};
+const $=s=>document.querySelector(s);
+const norm=s=>s.trim().toLowerCase().replace(/\s+/g," ");
+const strip=s=>norm(s).normalize("NFD").replace(/[\u0300-\u036f]/g,"");
+const alts=a=>a.split("/").map(norm);
+const store={get(k){try{return JSON.parse(localStorage.getItem(k))}catch(e){return null}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
+let variant=store.get("lenja-variant")==="pt"?"pt":"br",cur="presente",items=[];
+const isPT=()=>variant==="pt";
+const sentence=it=>isPT()&&it.p?it.p:it.b;
+const answer=it=>isPT()&&it.pa?it.pa:it.a;
+const otherAnswer=it=>isPT()?it.a:(it.pa||it.a);
+
+const canSpeak="speechSynthesis" in window&&typeof SpeechSynthesisUtterance!=="undefined";
+const ICON='<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"/></svg>';
+const normLang=l=>l.toLowerCase().replace("_","-");
+function pickVoice(){
+  const want=isPT()?"pt-pt":"pt-br";
+  const vs=speechSynthesis.getVoices().filter(v=>normLang(v.lang).startsWith("pt"));
+  return vs.find(v=>normLang(v.lang)===want)||vs[0]||null;
+}
+function speak(text){
+  if(!canSpeak)return;
+  speechSynthesis.cancel();
+  const u=new SpeechSynthesisUtterance(text);
+  u.lang=isPT()?"pt-PT":"pt-BR";u.rate=0.9;
+  const v=pickVoice(),n=$("#voicenote");
+  if(v){u.voice=v;u.lang=v.lang}
+  if(!v)n.textContent="No Portuguese voice found on this device. Add one in your system language or speech settings.";
+  else if(normLang(v.lang)!==(isPT()?"pt-pt":"pt-br"))n.textContent="Your device has no "+(isPT()?"European":"Brazilian")+" Portuguese voice, so this uses "+v.lang+" instead.";
+  else n.textContent="";
+  speechSynthesis.speak(u);
+}
+if(canSpeak){speechSynthesis.getVoices();document.addEventListener("click",e=>{const b=e.target.closest("[data-say]");if(b)speak(b.dataset.say)})}
+
+function shuffle(a){a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
+
+function renderVariant(){
+  $("#vbr").setAttribute("aria-pressed",!isPT());
+  $("#vpt").setAttribute("aria-pressed",isPT());
+}
+function renderTabs(){
+  const t=$("#tabs");t.innerHTML="";
+  for(const k in SETS){
+    const b=document.createElement("button");
+    b.className="tab";b.setAttribute("role","tab");b.textContent=SETS[k].name;
+    b.setAttribute("aria-selected",k===cur);
+    b.onclick=()=>{cur=k;load()};
+    t.appendChild(b);
+  }
+}
+function renderLearn(){
+  const s=SETS[cur],d=$("#learn");
+  let h="<summary>How it works</summary><p>"+s.rule+"</p>";
+  if(FORMS[cur]){
+    h+="<div class='tblwrap'><table><tr><th>Verb</th><th>eu</th><th class='"+(isPT()?"":"dim")+"'>tu</th><th>você, ele, ela</th><th>nós</th><th>vocês, eles, elas</th></tr>";
+    for(const row of FORMS[cur]){
+      h+="<tr>"+row.map((c,i)=>{
+        if(Array.isArray(c))c=isPT()?c[1]:c[0];
+        return "<td"+(i===2&&!isPT()?" class='dim'":"")+">"+(i>0&&canSpeak?"<button class='form' data-say='"+c+"' aria-label='Listen: "+c+"'>"+c+"</button>":c)+"</td>";
+      }).join("")+"</tr>";
+    }
+    h+="</table></div><p class='note'>"+(canSpeak?"Tap a form to hear it. ":"")+(isPT()
+      ?"In Portugal use tu with friends and family. Você is more formal and takes the ele/ela form."
+      :"In most of Brazil tu is replaced by você, which takes the ele/ela form, so the tu column is greyed out. You will still meet tu in some regions.")+"</p>";
+  }
+  d.innerHTML=h;
+}
+function load(){
+  renderVariant();renderTabs();renderLearn();
+  items=shuffle(SETS[cur].items).slice(0,10);
+  const ol=$("#list");ol.innerHTML="";
+  items.forEach((it,i)=>{
+    const li=document.createElement("li");li.className="q";
+    const [pre,post]=sentence(it).split("___");
+    li.append(pre);
+    const inp=document.createElement("input");
+    inp.type="text";inp.id="a"+i;inp.autocomplete="off";inp.autocapitalize="off";inp.spellcheck=false;
+    inp.setAttribute("aria-label","Answer "+(i+1));
+    inp.addEventListener("keydown",e=>{if(e.key==="Enter"){e.preventDefault();const n=document.getElementById("a"+(i+1));n?n.focus():$("#check").focus()}});
+    li.appendChild(inp);
+    li.append(post+" ");
+    const v=document.createElement("span");v.className="verb";v.textContent="("+it.v+")";
+    li.appendChild(v);
+    if(canSpeak){
+      const sp=document.createElement("button");
+      sp.type="button";sp.className="spk";
+      sp.setAttribute("aria-label","Listen to sentence "+(i+1));
+      sp.innerHTML=ICON;
+      sp.onclick=()=>speak(sentence(it).replace("___",answer(it).split("/")[0].trim()));
+      li.appendChild(sp);
+    }
+    const fb=document.createElement("span");fb.id="f"+i;li.appendChild(fb);
+    ol.appendChild(li);
+  });
+  $("#score").textContent="";
+  showBest();
+  const f=$("#a0");if(f)f.focus({preventScroll:true});
+}
+function setFeedback(i,msg,it,showWhy){
+  const fb=$("#f"+i);
+  let h="<span class='fb'>"+msg+"</span>";
+  if(showWhy){
+    h+="<span class='why'>"+it.w+"</span>";
+    if(it.d)h+="<span class='why'><i>Brazil vs Portugal:</i> "+it.d+"</span>";
+  }
+  fb.innerHTML=h;
+}
+function check(){
+  let ok=0,near=0;
+  items.forEach((it,i)=>{
+    const li=$("#a"+i).parentElement,val=$("#a"+i).value,ans=answer(it),answers=alts(ans);
+    li.classList.remove("ok","bad","near");
+    if(!val.trim()){li.classList.add("bad");setFeedback(i,"Empty. Correct answer: "+ans,it,true);return}
+    if(answers.includes(norm(val))){ok++;li.classList.add("ok");setFeedback(i,"Correct",it,true);}
+    else if(answers.map(strip).includes(strip(val))){near++;li.classList.add("near");setFeedback(i,"Almost. Check the accent: "+ans,it,true);}
+    else if(alts(otherAnswer(it)).includes(norm(val))){li.classList.add("near");setFeedback(i,"“"+val.trim()+"” is right for "+(isPT()?"Brazil":"Portugal")+". For "+(isPT()?"Portugal":"Brazil")+" use: "+ans,it,true);}
+    else{li.classList.add("bad");setFeedback(i,"Not quite. Correct answer: "+ans,it,true);}
+  });
+  $("#score").textContent=ok+" / "+items.length+" correct"+(near?" ("+near+" almost)":"");
+  const key=cur+"-"+variant,b=store.get("lenja-best")||{};
+  if(b[key]==null||ok>b[key]){b[key]=ok;store.set("lenja-best",b)}
+  showBest();
+}
+function showAnswers(){
+  items.forEach((it,i)=>{$("#a"+i).value=answer(it).split("/")[0].trim()});
+  check();
+  $("#score").textContent="Answers shown";
+}
+function showBest(){
+  const b=store.get("lenja-best"),k=cur+"-"+variant;
+  $("#best").textContent=b&&b[k]!=null?"Your best score here: "+b[k]+" / 10":"";
+}
+function setVariant(v){variant=v;store.set("lenja-variant",v);load()}
+$("#vbr").onclick=()=>setVariant("br");
+$("#vpt").onclick=()=>setVariant("pt");
+$("#check").onclick=check;
+$("#show").onclick=showAnswers;
+$("#again").onclick=load;
+load();
+</script>
+</body>
+</html>
